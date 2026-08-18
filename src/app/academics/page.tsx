@@ -1,0 +1,149 @@
+const programs = [
+  {
+    title: 'Elementary School (K-5)',
+    grades: 'Kindergarten - Grade 5',
+    desc: 'A nurturing environment where young learners build strong academic foundations through play-based and exploratory learning.',
+    highlights: ['Phonics & Reading Program', 'Hands-on STEM Activities', 'Social-Emotional Learning', 'Arts & Music Integration'],
+  },
+  {
+    title: 'Middle School (6-8)',
+    grades: 'Grade 6 - Grade 8',
+    desc: 'Developing critical thinking, creativity, and independence as students transition to more rigorous academics.',
+    highlights: ['Advanced Math & Science Tracks', 'Foreign Language (Spanish, French)', 'Digital Literacy & Coding', 'Advisory & Mentorship Program'],
+  },
+  {
+    title: 'High School (9-12)',
+    grades: 'Grade 9 - Grade 12',
+    desc: 'College-preparatory excellence with AP courses, honors classes, and real-world learning experiences.',
+    highlights: ['15+ AP Courses Available', 'STEM Research Program', 'College Counseling', 'Internship Opportunities'],
+  },
+];
+
+const faculty = [
+  { name: 'Dr. Patricia Williams', subject: 'Mathematics', exp: '15 years', degree: 'PhD, MIT' },
+  { name: 'Mr. David Kim', subject: 'Physics', exp: '12 years', degree: 'MSc, Stanford' },
+  { name: 'Ms. Jennifer Lopez', subject: 'English Literature', exp: '10 years', degree: 'MA, Columbia' },
+  { name: 'Dr. Michael Brown', subject: 'Chemistry', exp: '18 years', degree: 'PhD, Harvard' },
+  { name: 'Mrs. Susan Davis', subject: 'History', exp: '14 years', degree: 'MA, Yale' },
+  { name: 'Mr. James Wilson', subject: 'Computer Science', exp: '8 years', degree: 'MS, Georgia Tech' },
+];
+
+export default function AcademicsPage() {
+  return (
+    <>
+      <section className="bg-gradient-to-br from-[var(--primary)] to-[var(--primary-light)] text-white py-16 md:py-24">
+        <div className="container-main">
+          <p className="text-white/80 font-medium mb-2 tracking-wide uppercase text-sm">Academics</p>
+          <h1 className="text-4xl sm:text-5xl font-bold mb-4">Excellence in Every Classroom</h1>
+          <p className="text-lg text-white/90 max-w-2xl">
+            Our rigorous curriculum challenges and inspires students to reach their full potential at every grade level.
+          </p>
+        </div>
+      </section>
+
+      <section className="section bg-white">
+        <div className="container-main">
+          <h2 className="section-title">Academic Programs</h2>
+          <p className="section-subtitle">
+            Comprehensive education from kindergarten through 12th grade, designed to meet students where they are.
+          </p>
+          <div className="space-y-8">
+            {programs.map(prog => (
+              <div key={prog.title} className="card">
+                <div className="card-body">
+                  <div className="flex flex-col md:flex-row md:items-start md:gap-8">
+                    <div className="md:w-2/3">
+                      <h3 className="text-2xl font-bold text-[var(--primary)] mb-1">{prog.title}</h3>
+                      <p className="text-sm text-[var(--accent)] font-medium mb-3">{prog.grades}</p>
+                      <p className="text-[var(--muted)] leading-relaxed mb-4">{prog.desc}</p>
+                    </div>
+                    <div className="md:w-1/3 mt-4 md:mt-0">
+                      <h4 className="text-sm font-semibold text-[var(--foreground)] mb-2">Key Highlights</h4>
+                      <ul className="space-y-2">
+                        {prog.highlights.map(h => (
+                          <li key={h} className="flex items-start gap-2 text-sm text-[var(--muted)]">
+                            <span className="text-[var(--accent)] mt-0.5">✓</span>
+                            {h}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section bg-[var(--surface)]">
+        <div className="container-main">
+          <h2 className="section-title">Curriculum Overview</h2>
+          <p className="section-subtitle">
+            Our standards-based curriculum integrates core subjects with enrichment opportunities.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { title: 'Mathematics', icon: '📐', desc: 'From foundational numeracy to AP Calculus, building analytical thinking.' },
+              { title: 'Science', icon: '🔬', desc: 'Hands-on labs and inquiry-based learning in biology, chemistry, and physics.' },
+              { title: 'English Language Arts', icon: '📖', desc: 'Reading, writing, and communication skills for lifelong literacy.' },
+              { title: 'Social Studies', icon: '🌍', desc: 'History, geography, and civics to develop informed global citizens.' },
+              { title: 'Foreign Languages', icon: '🗣️', desc: 'Spanish and French programs building cultural awareness and communication.' },
+              { title: 'Arts & Music', icon: '🎨', desc: 'Visual arts, band, choir, and drama for creative expression.' },
+            ].map(subject => (
+              <div key={subject.title} className="card">
+                <div className="card-body text-center">
+                  <span className="text-3xl block mb-3">{subject.icon}</span>
+                  <h3 className="text-lg font-bold text-[var(--primary)] mb-2">{subject.title}</h3>
+                  <p className="text-[var(--muted)] text-sm">{subject.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section bg-white">
+        <div className="container-main">
+          <h2 className="section-title">Our Faculty</h2>
+          <p className="section-subtitle">
+            98% of our teachers hold advanced degrees, with an average of 10 years of experience.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {faculty.map(f => (
+              <div key={f.name} className="card">
+                <div className="card-body text-center">
+                  <div className="w-20 h-20 rounded-full bg-[var(--primary)]/10 mx-auto mb-4 flex items-center justify-center">
+                    <span className="text-2xl text-[var(--primary)] font-bold">{f.name.split(' ').pop()?.[0]}</span>
+                  </div>
+                  <h3 className="text-lg font-bold text-[var(--primary)]">{f.name}</h3>
+                  <p className="text-[var(--accent)] font-medium text-sm mb-1">{f.subject}</p>
+                  <p className="text-[var(--muted)] text-sm">{f.degree}</p>
+                  <p className="text-[var(--muted)] text-xs mt-1">{f.exp} experience</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section bg-gradient-to-r from-[var(--primary)] to-[var(--primary-light)] text-white">
+        <div className="container-main">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            {[
+              { value: '15+', label: 'AP Courses' },
+              { value: '98%', label: 'Teachers w/ Advanced Degrees' },
+              { value: '95%', label: 'College Acceptance' },
+              { value: '4.2', label: 'Avg. Student GPA' },
+            ].map(stat => (
+              <div key={stat.label}>
+                <p className="text-3xl md:text-4xl font-bold">{stat.value}</p>
+                <p className="text-sm text-white/70 mt-1">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}

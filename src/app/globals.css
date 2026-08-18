@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #1a1a2e;
+  --primary: #1e3a5f;
+  --primary-light: #2c5282;
+  --accent: #e8a838;
+  --accent-hover: #d4952e;
+  --surface: #f7f8fc;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-accent: var(--accent);
+  --color-surface: var(--surface);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+}
+
+/* ─── Utility Classes ─── */
+.container-main {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.section {
+  @apply py-12 md:py-20;
+}
+
+.section-title {
+  @apply text-3xl md:text-4xl font-bold text-center text-[var(--primary)] mb-3;
+}
+
+.section-subtitle {
+  @apply text-center text-[var(--muted)] text-lg max-w-2xl mx-auto mb-10;
+}
+
+.card {
+  @apply bg-white rounded-xl border border-[var(--border)] shadow-sm hover:shadow-md transition-shadow;
+}
+
+.card-body {
+  @apply p-6;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold text-white bg-[var(--primary)] hover:bg-[var(--primary-light)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:ring-offset-2;
+}
+
+.btn-outline {
+  @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold border-2 transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:ring-offset-2;
+}
+
+.form-label {
+  @apply block text-sm font-medium text-[var(--foreground)] mb-1.5;
+}
+
+.form-input {
+  @apply w-full px-4 py-2.5 rounded-lg border border-[var(--border)] bg-white text-[var(--foreground)] placeholder:text-[var(--muted)] focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent transition-shadow;
+}
+
+.form-error {
+  @apply text-sm text-red-600 mt-1;
+}
