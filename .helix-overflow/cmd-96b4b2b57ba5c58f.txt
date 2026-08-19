@@ -1,0 +1,80 @@
+Command: export PATH="/workspace/repo/.helix-venv/bin:/workspace/repo/venv/bin:/workspace/repo/.venv/bin:/workspace/.helix-venv/bin:$PATH" && cd /workspace/repo && git add -A && git commit -m "Deploy: static site export for GitHub Pages" 2>&1
+Cwd: /workspace/repo
+
+=== STDOUT ===
+[gh-pages-deploy (root-commit) 9deb51b] Deploy: static site export for GitHub Pages
+ 71 files changed, 886 insertions(+)
+ create mode 100644 404.html
+ create mode 100644 __next.__PAGE__.txt
+ create mode 100644 __next._full.txt
+ create mode 100644 __next._index.txt
+ create mode 100644 __next._tree.txt
+ create mode 100644 _next/static/chunks/0cz1d0mv5g_q7.js
+ create mode 100644 _next/static/chunks/19mx3mg6lkumu.js
+ create mode 100644 _next/static/chunks/1a84lhx-juob2.js
+ create mode 100644 _next/static/chunks/1jqci0in0k6ig.css
+ create mode 100644 _next/static/chunks/2jwteh9tqq8mc.js
+ create mode 100644 _next/static/chunks/310vm2bl3xxpt.js
+ create mode 100644 _next/static/chunks/3e4keds9ktjdu.js
+ create mode 100644 _next/static/chunks/3fntmmi971322.js
+ create mode 100644 _next/static/chunks/3lrlq-_ra8cyp.js
+ create mode 100644 _next/static/chunks/3n-p115s5-d7c.js
+ create mode 100644 _next/static/chunks/turbopack-3h2g5yokr409k.js
+ create mode 100644 _next/static/kFVMAcqNEDPNQ37uMAykK/_buildManifest.js
+ create mode 100644 _next/static/kFVMAcqNEDPNQ37uMAykK/_clientMiddlewareManifest.js
+ create mode 100644 _next/static/kFVMAcqNEDPNQ37uMAykK/_ssgManifest.js
+ create mode 100644 _next/static/media/1bffadaabf893a1e-s.3-6t-g6q0vh0a.woff2
+ create mode 100644 _next/static/media/2bbe8d2671613f1f-s.0k62hbripvv8p.woff2
+ create mode 100644 _next/static/media/2c55a0e60120577a-s.0-dom-5bn10r2.woff2
+ create mode 100644 _next/static/media/5476f68d60460930-s.2uwcyprjm3xu3.woff2
+ create mode 100644 _next/static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2
+ create mode 100644 _next/static/media/9c72aa0f40e4eef8-s.1y4-pdgsjb-pw.woff2
+ create mode 100644 _next/static/media/ad66f9afd8947f86-s.3lvt2whj97whp.woff2
+ create mode 100644 _next/static/media/favicon.2vob68tjqpejf.ico
+ create mode 100644 _not-found.html
+ create mode 100644 _not-found.txt
+ create mode 100644 _not-found/__next._full.txt
+ create mode 100644 _not-found/__next._index.txt
+ create mode 100644 _not-found/__next._not-found.__PAGE__.txt
+ create mode 100644 _not-found/__next._tree.txt
+ create mode 100644 about.html
+ create mode 100644 about.txt
+ create mode 100644 about/__next._full.txt
+ create mode 100644 about/__next._index.txt
+ create mode 100644 about/__next._tree.txt
+ create mode 100644 about/__next.about.__PAGE__.txt
+ create mode 100644 academics.html
+ create mode 100644 academics.txt
+ create mode 100644 academics/__next._full.txt
+ create mode 100644 academics/__next._index.txt
+ create mode 100644 academics/__next._tree.txt
+ create mode 100644 academics/__next.academics.__PAGE__.txt
+ create mode 100644 admissions.html
+ create mode 100644 admissions.txt
+ create mode 100644 admissions/__next._full.txt
+ create mode 100644 admissions/__next._index.txt
+ create mode 100644 admissions/__next._tree.txt
+ create mode 100644 admissions/__next.admissions.__PAGE__.txt
+ create mode 100644 contact.html
+ create mode 100644 contact.txt
+ create mode 100644 contact/__next._full.txt
+ create mode 100644 contact/__next._index.txt
+ create mode 100644 contact/__next._tree.txt
+ create mode 100644 contact/__next.contact.__PAGE__.txt
+ create mode 100644 favicon.ico
+ create mode 100644 file.svg
+ create mode 100644 globe.svg
+ create mode 100644 index.html
+ create mode 100644 index.txt
+ create mode 100644 next.svg
+ create mode 100644 student-life.html
+ create mode 100644 student-life.txt
+ create mode 100644 student-life/__next._full.txt
+ create mode 100644 student-life/__next._index.txt
+ create mode 100644 student-life/__next._tree.txt
+ create mode 100644 student-life/__next.student-life.__PAGE__.txt
+ create mode 100644 vercel.svg
+ create mode 100644 window.svg
+
+
+=== STDERR ===
