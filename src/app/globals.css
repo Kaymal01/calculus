@@ -1,12 +1,25 @@
 @import "tailwindcss";
 
 :root {
+  /* ─── Brand Colors ─── */
+  --deep-blue: #1e3a5f;
+  --deep-blue-light: #2c5282;
+  --deep-blue-dark: #152a45;
+  --sky-blue: #87CEEB;
+  --sky-blue-light: #b4e0f2;
+  --sky-blue-dark: #5bb8d9;
+  --sky-blue-pale: #e8f4fa;
+
+  /* ─── Semantic Colors ─── */
   --background: #ffffff;
   --foreground: #1a1a2e;
-  --primary: #1e3a5f;
-  --primary-light: #2c5282;
-  --accent: #e8a838;
-  --accent-hover: #d4952e;
+  --primary: var(--deep-blue);
+  --primary-light: var(--deep-blue-light);
+  --primary-dark: var(--deep-blue-dark);
+  --accent: var(--sky-blue);
+  --accent-light: var(--sky-blue-light);
+  --accent-dark: var(--sky-blue-dark);
+  --accent-pale: var(--sky-blue-pale);
   --surface: #f7f8fc;
   --muted: #6b7280;
   --border: #e5e7eb;
@@ -17,7 +30,11 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-primary-light: var(--primary-light);
+  --color-primary-dark: var(--primary-dark);
   --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
+  --color-accent-dark: var(--accent-dark);
+  --color-accent-pale: var(--accent-pale);
   --color-surface: var(--surface);
   --color-muted: var(--muted);
   --color-border: var(--border);
@@ -58,8 +75,16 @@ body {
   @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold text-white bg-[var(--primary)] hover:bg-[var(--primary-light)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:ring-offset-2;
 }
 
+.btn-accent {
+  @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold text-[var(--primary)] bg-[var(--accent)] hover:bg-[var(--accent-light)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--accent)] focus:ring-offset-2;
+}
+
 .btn-outline {
-  @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold border-2 transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:ring-offset-2;
+  @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold border-2 border-[var(--primary)] text-[var(--primary)] hover:bg-[var(--primary)] hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:ring-offset-2;
+}
+
+.btn-outline-light {
+  @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold border-2 border-white text-white hover:bg-white hover:text-[var(--primary)] transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2;
 }
 
 .form-label {
@@ -67,9 +92,43 @@ body {
 }
 
 .form-input {
-  @apply w-full px-4 py-2.5 rounded-lg border border-[var(--border)] bg-white text-[var(--foreground)] placeholder:text-[var(--muted)] focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent transition-shadow;
+  @apply w-full px-4 py-2.5 rounded-lg border border-[var(--border)] bg-white text-[var(--foreground)] placeholder:text-[var(--muted)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)] focus:border-transparent transition-shadow;
 }
 
 .form-error {
   @apply text-sm text-red-600 mt-1;
+}
+
+/* ─── Gradient Utilities ─── */
+.bg-gradient-brand {
+  background: linear-gradient(135deg, var(--deep-blue) 0%, var(--deep-blue-light) 50%, var(--sky-blue-dark) 100%);
+}
+
+.bg-gradient-sky {
+  background: linear-gradient(135deg, var(--sky-blue) 0%, var(--sky-blue-dark) 100%);
+}
+
+.bg-gradient-hero {
+  background: linear-gradient(135deg, var(--deep-blue) 0%, var(--deep-blue-light) 60%, var(--sky-blue) 100%);
+}
+
+.text-gradient-brand {
+  background: linear-gradient(135deg, var(--deep-blue), var(--sky-blue-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Accent Border Utilities ─── */
+.border-accent-left {
+  border-left: 4px solid var(--accent);
+}
+
+.border-accent-top {
+  border-top: 4px solid var(--accent);
+}
+
+/* ─── Sky Blue Badge ─── */
+.badge-sky {
+  @apply inline-block px-3 py-1 text-xs font-semibold rounded-full text-[var(--primary)] bg-[var(--accent-pale)];
 }

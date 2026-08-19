@@ -76,22 +76,25 @@ export default function AdmissionsPage() {
   if (submitted) {
     return (
       <>
-        <section className="bg-gradient-to-br from-[var(--primary)] to-[var(--primary-light)] text-white py-16 md:py-24">
-          <div className="container-main">
-            <p className="text-white/80 font-medium mb-2 tracking-wide uppercase text-sm">Admissions</p>
+        <section className="bg-gradient-hero text-white py-16 md:py-24 relative overflow-hidden">
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-10 right-20 w-72 h-72 rounded-full bg-[var(--sky-blue)] blur-3xl" />
+          </div>
+          <div className="container-main relative z-10">
+            <span className="badge-sky mb-4 inline-block">Admissions</span>
             <h1 className="text-4xl sm:text-5xl font-bold mb-4">Application Submitted</h1>
           </div>
         </section>
         <section className="section bg-white">
           <div className="container-main max-w-2xl">
-            <div className="card text-center">
+            <div className="card border-accent-top text-center">
               <div className="card-body py-12">
-                <div className="w-16 h-16 rounded-full bg-green-100 mx-auto mb-4 flex items-center justify-center">
-                  <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-16 h-16 rounded-full bg-[var(--sky-blue-pale)] mx-auto mb-4 flex items-center justify-center">
+                  <svg className="w-8 h-8 text-[var(--sky-blue-dark)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <h2 className="text-2xl font-bold text-[var(--primary)] mb-3">Thank You!</h2>
+                <h2 className="text-2xl font-bold text-[var(--deep-blue)] mb-3">Thank You!</h2>
                 <p className="text-[var(--muted)] leading-relaxed mb-6">
                   Your enrollment application for <strong>{formData.studentName}</strong> has been submitted successfully.
                   Our admissions team will review your application and contact you within 5 business days.
@@ -109,9 +112,12 @@ export default function AdmissionsPage() {
 
   return (
     <>
-      <section className="bg-gradient-to-br from-[var(--primary)] to-[var(--primary-light)] text-white py-16 md:py-24">
-        <div className="container-main">
-          <p className="text-white/80 font-medium mb-2 tracking-wide uppercase text-sm">Admissions</p>
+      <section className="bg-gradient-hero text-white py-16 md:py-24 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 right-20 w-72 h-72 rounded-full bg-[var(--sky-blue)] blur-3xl" />
+        </div>
+        <div className="container-main relative z-10">
+          <span className="badge-sky mb-4 inline-block">Admissions</span>
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">Join Our Community</h1>
           <p className="text-lg text-white/90 max-w-2xl">
             Begin your journey with Calculus Comprehensive. Applications for 2025-2026 are now open.
@@ -125,12 +131,12 @@ export default function AdmissionsPage() {
           <p className="section-subtitle">Five simple steps to become part of our school family.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {steps.map(s => (
-              <div key={s.step} className="card">
+              <div key={s.step} className="card border-accent-top">
                 <div className="card-body text-center">
-                  <div className="w-10 h-10 rounded-full bg-[var(--primary)] text-white font-bold flex items-center justify-center mx-auto mb-3">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[var(--deep-blue)] to-[var(--sky-blue)] text-white font-bold flex items-center justify-center mx-auto mb-3">
                     {s.step}
                   </div>
-                  <h3 className="text-lg font-bold text-[var(--primary)] mb-2">{s.title}</h3>
+                  <h3 className="text-lg font-bold text-[var(--deep-blue)] mb-2">{s.title}</h3>
                   <p className="text-[var(--muted)] text-sm">{s.desc}</p>
                 </div>
               </div>
@@ -139,18 +145,18 @@ export default function AdmissionsPage() {
         </div>
       </section>
 
-      <section className="section bg-[var(--surface)]">
+      <section className="section bg-[var(--accent-pale)]">
         <div className="container-main">
           <h2 className="section-title">Requirements by Level</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {requirements.map(req => (
-              <div key={req.category} className="card">
+              <div key={req.category} className="card bg-white border-accent-left">
                 <div className="card-body">
-                  <h3 className="text-lg font-bold text-[var(--primary)] mb-4">{req.category}</h3>
+                  <h3 className="text-lg font-bold text-[var(--deep-blue)] mb-4">{req.category}</h3>
                   <ul className="space-y-2">
                     {req.items.map(item => (
                       <li key={item} className="flex items-start gap-2 text-sm text-[var(--muted)]">
-                        <span className="text-[var(--accent)] mt-0.5">•</span>
+                        <span className="text-[var(--sky-blue-dark)] mt-0.5">•</span>
                         {item}
                       </li>
                     ))}
@@ -169,7 +175,7 @@ export default function AdmissionsPage() {
             Complete the form below to begin the admissions process. All fields marked with * are required.
           </p>
 
-          <form onSubmit={handleSubmit} className="card" noValidate>
+          <form onSubmit={handleSubmit} className="card border-accent-top" noValidate>
             <div className="card-body">
               {errors.form && (
                 <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
@@ -177,7 +183,7 @@ export default function AdmissionsPage() {
                 </div>
               )}
 
-              <h3 className="text-lg font-bold text-[var(--primary)] mb-4 pb-2 border-b border-[var(--border)]">
+              <h3 className="text-lg font-bold text-[var(--deep-blue)] mb-4 pb-2 border-b border-[var(--border)]">
                 Student Information
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
@@ -208,7 +214,7 @@ export default function AdmissionsPage() {
                 </div>
               </div>
 
-              <h3 className="text-lg font-bold text-[var(--primary)] mb-4 pb-2 border-b border-[var(--border)]">
+              <h3 className="text-lg font-bold text-[var(--deep-blue)] mb-4 pb-2 border-b border-[var(--border)]">
                 Parent/Guardian Information
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
@@ -237,7 +243,7 @@ export default function AdmissionsPage() {
                 </div>
               </div>
 
-              <h3 className="text-lg font-bold text-[var(--primary)] mb-4 pb-2 border-b border-[var(--border)]">Address</h3>
+              <h3 className="text-lg font-bold text-[var(--deep-blue)] mb-4 pb-2 border-b border-[var(--border)]">Address</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                 <div className="sm:col-span-2">
                   <label className="form-label" htmlFor="address">Street Address</label>
@@ -262,7 +268,7 @@ export default function AdmissionsPage() {
                 </div>
               </div>
 
-              <h3 className="text-lg font-bold text-[var(--primary)] mb-4 pb-2 border-b border-[var(--border)]">Additional Information</h3>
+              <h3 className="text-lg font-bold text-[var(--deep-blue)] mb-4 pb-2 border-b border-[var(--border)]">Additional Information</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                 <div>
                   <label className="form-label" htmlFor="specialNeeds">Special Needs or Accommodations</label>
@@ -304,7 +310,7 @@ export default function AdmissionsPage() {
         </div>
       </section>
 
-      <section className="section bg-[var(--surface)]">
+      <section className="section bg-[var(--accent-pale)]">
         <div className="container-main text-center">
           <h2 className="section-title">Tuition & Financial Aid</h2>
           <p className="section-subtitle mb-8">
@@ -316,11 +322,11 @@ export default function AdmissionsPage() {
               { level: 'Middle School', tuition: '$14,800/yr', note: 'Grades 6-8' },
               { level: 'High School', tuition: '$16,200/yr', note: 'Grades 9-12' },
             ].map(t => (
-              <div key={t.level} className="card">
+              <div key={t.level} className="card bg-white border-accent-top">
                 <div className="card-body text-center">
-                  <h3 className="text-lg font-bold text-[var(--primary)]">{t.level}</h3>
+                  <h3 className="text-lg font-bold text-[var(--deep-blue)]">{t.level}</h3>
                   <p className="text-sm text-[var(--muted)] mb-2">{t.note}</p>
-                  <p className="text-3xl font-bold text-[var(--accent)]">{t.tuition}</p>
+                  <p className="text-3xl font-bold text-[var(--sky-blue-dark)]">{t.tuition}</p>
                 </div>
               </div>
             ))}

@@ -31,9 +31,12 @@ const faculty = [
 export default function AcademicsPage() {
   return (
     <>
-      <section className="bg-gradient-to-br from-[var(--primary)] to-[var(--primary-light)] text-white py-16 md:py-24">
-        <div className="container-main">
-          <p className="text-white/80 font-medium mb-2 tracking-wide uppercase text-sm">Academics</p>
+      <section className="bg-gradient-hero text-white py-16 md:py-24 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 right-20 w-72 h-72 rounded-full bg-[var(--sky-blue)] blur-3xl" />
+        </div>
+        <div className="container-main relative z-10">
+          <span className="badge-sky mb-4 inline-block">Academics</span>
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">Excellence in Every Classroom</h1>
           <p className="text-lg text-white/90 max-w-2xl">
             Our rigorous curriculum challenges and inspires students to reach their full potential at every grade level.
@@ -49,12 +52,12 @@ export default function AcademicsPage() {
           </p>
           <div className="space-y-8">
             {programs.map(prog => (
-              <div key={prog.title} className="card">
+              <div key={prog.title} className="card border-accent-left">
                 <div className="card-body">
                   <div className="flex flex-col md:flex-row md:items-start md:gap-8">
                     <div className="md:w-2/3">
-                      <h3 className="text-2xl font-bold text-[var(--primary)] mb-1">{prog.title}</h3>
-                      <p className="text-sm text-[var(--accent)] font-medium mb-3">{prog.grades}</p>
+                      <h3 className="text-2xl font-bold text-[var(--deep-blue)] mb-1">{prog.title}</h3>
+                      <p className="badge-sky mb-3">{prog.grades}</p>
                       <p className="text-[var(--muted)] leading-relaxed mb-4">{prog.desc}</p>
                     </div>
                     <div className="md:w-1/3 mt-4 md:mt-0">
@@ -62,7 +65,7 @@ export default function AcademicsPage() {
                       <ul className="space-y-2">
                         {prog.highlights.map(h => (
                           <li key={h} className="flex items-start gap-2 text-sm text-[var(--muted)]">
-                            <span className="text-[var(--accent)] mt-0.5">✓</span>
+                            <span className="text-[var(--sky-blue-dark)] mt-0.5">✓</span>
                             {h}
                           </li>
                         ))}
@@ -76,7 +79,7 @@ export default function AcademicsPage() {
         </div>
       </section>
 
-      <section className="section bg-[var(--surface)]">
+      <section className="section bg-[var(--accent-pale)]">
         <div className="container-main">
           <h2 className="section-title">Curriculum Overview</h2>
           <p className="section-subtitle">
@@ -91,10 +94,10 @@ export default function AcademicsPage() {
               { title: 'Foreign Languages', icon: '🗣️', desc: 'Spanish and French programs building cultural awareness and communication.' },
               { title: 'Arts & Music', icon: '🎨', desc: 'Visual arts, band, choir, and drama for creative expression.' },
             ].map(subject => (
-              <div key={subject.title} className="card">
+              <div key={subject.title} className="card bg-white border-accent-top">
                 <div className="card-body text-center">
                   <span className="text-3xl block mb-3">{subject.icon}</span>
-                  <h3 className="text-lg font-bold text-[var(--primary)] mb-2">{subject.title}</h3>
+                  <h3 className="text-lg font-bold text-[var(--deep-blue)] mb-2">{subject.title}</h3>
                   <p className="text-[var(--muted)] text-sm">{subject.desc}</p>
                 </div>
               </div>
@@ -113,11 +116,11 @@ export default function AcademicsPage() {
             {faculty.map(f => (
               <div key={f.name} className="card">
                 <div className="card-body text-center">
-                  <div className="w-20 h-20 rounded-full bg-[var(--primary)]/10 mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-2xl text-[var(--primary)] font-bold">{f.name.split(' ').pop()?.[0]}</span>
+                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[var(--deep-blue)] to-[var(--sky-blue)] mx-auto mb-4 flex items-center justify-center">
+                    <span className="text-2xl text-white font-bold">{f.name.split(' ').pop()?.[0]}</span>
                   </div>
-                  <h3 className="text-lg font-bold text-[var(--primary)]">{f.name}</h3>
-                  <p className="text-[var(--accent)] font-medium text-sm mb-1">{f.subject}</p>
+                  <h3 className="text-lg font-bold text-[var(--deep-blue)]">{f.name}</h3>
+                  <p className="text-[var(--sky-blue-dark)] font-medium text-sm mb-1">{f.subject}</p>
                   <p className="text-[var(--muted)] text-sm">{f.degree}</p>
                   <p className="text-[var(--muted)] text-xs mt-1">{f.exp} experience</p>
                 </div>
@@ -127,7 +130,7 @@ export default function AcademicsPage() {
         </div>
       </section>
 
-      <section className="section bg-gradient-to-r from-[var(--primary)] to-[var(--primary-light)] text-white">
+      <section className="section bg-gradient-to-r from-[var(--deep-blue)] via-[var(--deep-blue-light)] to-[var(--sky-blue-dark)] text-white">
         <div className="container-main">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[

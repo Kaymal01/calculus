@@ -26,9 +26,12 @@ const events = [
 export default function StudentLifePage() {
   return (
     <>
-      <section className="bg-gradient-to-br from-[var(--primary)] to-[var(--primary-light)] text-white py-16 md:py-24">
-        <div className="container-main">
-          <p className="text-white/80 font-medium mb-2 tracking-wide uppercase text-sm">Student Life</p>
+      <section className="bg-gradient-hero text-white py-16 md:py-24 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 right-20 w-72 h-72 rounded-full bg-[var(--sky-blue)] blur-3xl" />
+        </div>
+        <div className="container-main relative z-10">
+          <span className="badge-sky mb-4 inline-block">Student Life</span>
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">Beyond the Classroom</h1>
           <p className="text-lg text-white/90 max-w-2xl">
             At Calculus Comprehensive, education extends far beyond textbooks. Discover a vibrant community where students thrive.
@@ -42,14 +45,14 @@ export default function StudentLifePage() {
           <p className="section-subtitle">Over 50 extracurricular options ensure every student finds their passion.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {activities.map(cat => (
-              <div key={cat.name} className="card">
+              <div key={cat.name} className="card border-accent-top">
                 <div className="card-body">
                   <span className="text-3xl block mb-3">{cat.icon}</span>
-                  <h3 className="text-lg font-bold text-[var(--primary)] mb-3">{cat.name}</h3>
+                  <h3 className="text-lg font-bold text-[var(--deep-blue)] mb-3">{cat.name}</h3>
                   <ul className="space-y-1.5">
                     {cat.items.map(item => (
                       <li key={item} className="text-sm text-[var(--muted)] flex items-center gap-2">
-                        <span className="text-[var(--accent)]">•</span>
+                        <span className="text-[var(--sky-blue-dark)]">•</span>
                         {item}
                       </li>
                     ))}
@@ -61,16 +64,16 @@ export default function StudentLifePage() {
         </div>
       </section>
 
-      <section className="section bg-[var(--surface)]">
+      <section className="section bg-[var(--accent-pale)]">
         <div className="container-main">
           <h2 className="section-title">Our Facilities</h2>
           <p className="section-subtitle">Modern, well-equipped spaces designed to support learning and growth.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {facilities.map(f => (
-              <div key={f.name} className="card">
+              <div key={f.name} className="card bg-white border-accent-left">
                 <div className="card-body text-center">
                   <span className="text-4xl block mb-3">{f.icon}</span>
-                  <h3 className="text-lg font-bold text-[var(--primary)] mb-2">{f.name}</h3>
+                  <h3 className="text-lg font-bold text-[var(--deep-blue)] mb-2">{f.name}</h3>
                   <p className="text-[var(--muted)] text-sm leading-relaxed">{f.desc}</p>
                 </div>
               </div>
@@ -85,16 +88,16 @@ export default function StudentLifePage() {
           <p className="section-subtitle">Stay connected with what's happening at our school.</p>
           <div className="max-w-3xl mx-auto space-y-4">
             {events.map(event => (
-              <div key={event.title} className="card">
+              <div key={event.title} className="card border-accent-left">
                 <div className="card-body flex items-center gap-4">
                   <div className="flex-shrink-0 w-16 text-center">
-                    <p className="text-sm font-bold text-[var(--accent)]">{event.date.split(' ')[0]}</p>
-                    <p className="text-xl font-bold text-[var(--primary)]">{event.date.split(' ')[1]}</p>
+                    <p className="text-sm font-bold text-[var(--sky-blue-dark)]">{event.date.split(' ')[0]}</p>
+                    <p className="text-xl font-bold text-[var(--deep-blue)]">{event.date.split(' ')[1]}</p>
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-bold text-[var(--primary)]">{event.title}</h3>
+                    <h3 className="font-bold text-[var(--deep-blue)]">{event.title}</h3>
                   </div>
-                  <span className="hidden sm:inline-flex px-3 py-1 rounded-full text-xs font-medium bg-[var(--surface)] text-[var(--muted)] border border-[var(--border)]">
+                  <span className="badge-sky hidden sm:inline-flex">
                     {event.type}
                   </span>
                 </div>
@@ -114,12 +117,17 @@ export default function StudentLifePage() {
               { name: 'Marcus J.', grade: 'Grade 8', text: 'Swimming team taught me discipline and teamwork. The coaches push us to be our best.' },
               { name: 'Sophia L.', grade: 'Grade 11', text: 'Drama club helped me find my confidence. Performing on stage is my favorite thing to do.' },
             ].map(student => (
-              <div key={student.name} className="card">
+              <div key={student.name} className="card bg-white border-accent-top">
                 <div className="card-body">
                   <p className="text-[var(--foreground)] leading-relaxed mb-4 italic">"{student.text}"</p>
-                  <div>
-                    <p className="font-semibold text-[var(--primary)]">{student.name}</p>
-                    <p className="text-sm text-[var(--muted)]">{student.grade}</p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[var(--deep-blue)] to-[var(--sky-blue)] flex items-center justify-center">
+                      <span className="text-white font-bold text-sm">{student.name[0]}</span>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-[var(--deep-blue)]">{student.name}</p>
+                      <p className="text-sm text-[var(--muted)]">{student.grade}</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -128,15 +136,15 @@ export default function StudentLifePage() {
         </div>
       </section>
 
-      <section className="section bg-gradient-to-r from-[var(--primary)] to-[var(--primary-light)] text-white text-center">
+      <section className="section bg-gradient-to-r from-[var(--deep-blue)] via-[var(--deep-blue-light)] to-[var(--sky-blue-dark)] text-white text-center">
         <div className="container-main">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Experience Student Life</h2>
           <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
             Visit our campus and see firsthand what makes Calculus Comprehensive a great place to learn and grow.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="/admissions#enroll" className="btn-primary bg-[var(--accent)] hover:bg-[var(--accent-hover)]">Apply Now</a>
-            <a href="/contact" className="btn-outline border-white text-white hover:bg-white hover:text-[var(--primary)]">Schedule a Tour</a>
+            <a href="/admissions#enroll" className="btn-accent text-lg px-8 py-4">Apply Now</a>
+            <a href="/contact" className="btn-outline-light text-lg px-8 py-4">Schedule a Tour</a>
           </div>
         </div>
       </section>
