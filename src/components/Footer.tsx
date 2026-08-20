@@ -45,16 +45,16 @@ export default function Footer() {
                 <span className="text-[var(--deep-blue)] font-bold text-xl">C</span>
               </div>
               <div>
-                <p className="font-bold text-white leading-tight">Calculus Comprehensive</p>
-                <p className="text-xs text-[var(--sky-blue-light)] tracking-wide">EXCELLENCE IN EDUCATION</p>
+                <p className="font-bold text-white leading-tight">Calculus Comprehensive School</p>
+                <p className="text-xs text-[var(--sky-blue-light)] tracking-wide">LEARNING WITH PURPOSE</p>
               </div>
             </div>
             <p className="text-sm text-white/70 leading-relaxed">
-              Empowering young minds through academic excellence, character development, and a nurturing community since 1985.
+              Child-centred education from daycare through secondary school, with academic excellence, character, and care at the heart of our work.
             </p>
             <div className="mt-4 flex items-center gap-2 text-sm text-white/60">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" /><circle cx="12" cy="10" r="3" /></svg>
-              123 Education Drive, Knowledge City
+              Ijoba Bus Stop, 1-3 Calculus Avenue, Tipper Garage Rd, Itele, Ota 102213, Ogun State
             </div>
           </div>
 
@@ -83,7 +83,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Calculus Comprehensive School. All rights reserved.
           </p>
           <p className="text-xs text-white/50">
-            Office Hours: Mon-Fri 8:00 AM - 4:00 PM | (555) 123-4567
+            Open 24 hours | 0810 660 4904
           </p>
         </div>
       </div>

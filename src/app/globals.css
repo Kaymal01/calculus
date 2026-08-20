@@ -2,36 +2,40 @@
 
 :root {
   /* ─── Brand Colors ─── */
-  --deep-blue: #1e3a5f;
-  --deep-blue-light: #2c5282;
-  --deep-blue-dark: #152a45;
-  --sky-blue: #87CEEB;
-  --sky-blue-light: #b4e0f2;
-  --sky-blue-dark: #5bb8d9;
-  --sky-blue-pale: #e8f4fa;
+  --deep-blue: #173f3a;
+  --deep-blue-light: #28645a;
+  --deep-blue-dark: #0d2c29;
+  --sky-blue: #e5a24b;
+  --sky-blue-light: #f5d39b;
+  --sky-blue-dark: #c97832;
+  --sky-blue-pale: #fdf1df;
 
   /* ─── Semantic Colors ─── */
-  --background: #ffffff;
-  --foreground: #1a1a2e;
+  --background: #fbfaf6;
+  --foreground: #24302d;
   --primary: var(--deep-blue);
+  --primary-foreground: #ffffff;
   --primary-light: var(--deep-blue-light);
   --primary-dark: var(--deep-blue-dark);
   --accent: var(--sky-blue);
+  --accent-foreground: var(--deep-blue-dark);
   --accent-light: var(--sky-blue-light);
   --accent-dark: var(--sky-blue-dark);
   --accent-pale: var(--sky-blue-pale);
-  --surface: #f7f8fc;
-  --muted: #6b7280;
-  --border: #e5e7eb;
+  --surface: #f2f0e8;
+  --muted: #64716d;
+  --border: #dfe3dc;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
   --color-primary-light: var(--primary-light);
   --color-primary-dark: var(--primary-dark);
   --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
   --color-accent-light: var(--accent-light);
   --color-accent-dark: var(--accent-dark);
   --color-accent-pale: var(--accent-pale);
@@ -43,7 +47,28 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  font-family: var(--font-sans), sans-serif;
+  background-image: radial-gradient(circle at 1px 1px, rgba(23, 63, 58, 0.055) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display), Georgia, serif;
+  letter-spacing: 0;
+}
+
+.font-display {
+  font-family: var(--font-display), Georgia, serif;
+}
+
+.eyebrow {
+  @apply text-xs font-semibold uppercase tracking-[0.18em];
+}
+
+.home-hero-image {
+  background-image: linear-gradient(180deg, rgba(13, 44, 41, 0.08), rgba(13, 44, 41, 0.34)), url('https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmODkFP3TgZ6omcSrXaCND1ZADbhdSL8KqBPFTYsgwNCucAxWkJPo5XajR6Vd-4nAWUBjchEU1cY0YvVGNYNZs8rwV8MOa_vqp6WyarfcJCU_viXZhBzUaPbaYdujJFfIm-RIKM=w1400-h920-k-no');
+  background-position: center;
+  background-size: cover;
 }
 
 /* ─── Utility Classes ─── */
@@ -64,7 +89,7 @@ body {
 }
 
 .card {
-  @apply bg-white rounded-xl border border-[var(--border)] shadow-sm hover:shadow-md transition-shadow;
+  @apply bg-white rounded-lg border border-[var(--border)] shadow-sm hover:shadow-md transition-shadow;
 }
 
 .card-body {
@@ -109,7 +134,7 @@ body {
 }
 
 .bg-gradient-hero {
-  background: linear-gradient(135deg, var(--deep-blue) 0%, var(--deep-blue-light) 60%, var(--sky-blue) 100%);
+  background: linear-gradient(120deg, var(--deep-blue-dark) 0%, var(--deep-blue) 62%, var(--sky-blue-dark) 100%);
 }
 
 .text-gradient-brand {
@@ -131,4 +156,13 @@ body {
 /* ─── Sky Blue Badge ─── */
 .badge-sky {
   @apply inline-block px-3 py-1 text-xs font-semibold rounded-full text-[var(--primary)] bg-[var(--accent-pale)];
+}
+
+* {
+  border-color: var(--border);
+}
+
+::selection {
+  background: var(--sky-blue-light);
+  color: var(--deep-blue-dark);
 }

@@ -14,8 +14,8 @@ const programs = [
   {
     title: 'High School (9-12)',
     grades: 'Grade 9 - Grade 12',
-    desc: 'College-preparatory excellence with AP courses, honors classes, and real-world learning experiences.',
-    highlights: ['15+ AP Courses Available', 'STEM Research Program', 'College Counseling', 'Internship Opportunities'],
+    desc: 'Building confident learners through advanced studies in English, Mathematics, Sciences, and a purposeful Tahfiz programme.',
+    highlights: ['English & Mathematics', 'Science Foundations', 'Tahfiz Programme', 'Individual Attention'],
   },
 ];
 
@@ -39,7 +39,7 @@ export default function AcademicsPage() {
           <span className="badge-sky mb-4 inline-block">Academics</span>
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">Excellence in Every Classroom</h1>
           <p className="text-lg text-white/90 max-w-2xl">
-            Our rigorous curriculum challenges and inspires students to reach their full potential at every grade level.
+            Our child-centred curriculum challenges and inspires students to reach their full potential at every stage.
           </p>
         </div>
       </section>
@@ -48,7 +48,7 @@ export default function AcademicsPage() {
         <div className="container-main">
           <h2 className="section-title">Academic Programs</h2>
           <p className="section-subtitle">
-            Comprehensive education from kindergarten through 12th grade, designed to meet students where they are.
+            Thoughtful learning from daycare through secondary school, designed around each child’s age, needs, and potential.
           </p>
           <div className="space-y-8">
             {programs.map(prog => (
@@ -134,10 +134,10 @@ export default function AcademicsPage() {
         <div className="container-main">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
-              { value: '15+', label: 'AP Courses' },
-              { value: '98%', label: 'Teachers w/ Advanced Degrees' },
-              { value: '95%', label: 'College Acceptance' },
-              { value: '4.2', label: 'Avg. Student GPA' },
+              { value: '4', label: 'School Sections' },
+              { value: '15+', label: 'Years Educating Children' },
+              { value: 'IPC', label: 'Primary Curriculum' },
+              { value: 'K-12', label: 'Tahfiz Integrated' },
             ].map(stat => (
               <div key={stat.label}>
                 <p className="text-3xl md:text-4xl font-bold">{stat.value}</p>

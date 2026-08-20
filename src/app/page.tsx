@@ -1,9 +1,9 @@
 import Link from 'next/link';
 
 const programs = [
-  { title: 'Elementary', desc: 'K-5', icon: '🌟', detail: 'Building strong foundations through engaging, play-based learning experiences.' },
-  { title: 'Middle School', desc: 'Grades 6-8', icon: '🚀', detail: 'Developing critical thinking and independence in a supportive environment.' },
-  { title: 'High School', desc: 'Grades 9-12', icon: '🎓', detail: 'College-preparatory excellence with AP courses and real-world experiences.' },
+  { title: 'Daycare', desc: '18 months - 5+', icon: '🌱', detail: 'A prepared Montessori environment where children build confidence through play and discovery.' },
+  { title: 'Nursery & Primary', desc: 'Early years - Basic 6', icon: '📚', detail: 'Child-centred learning through the International Primary Curriculum and caring guidance.' },
+  { title: 'Secondary', desc: 'Year 7 - 15+', icon: '🎓', detail: 'Stronger foundations in English, Mathematics, Sciences, and a purposeful Tahfiz programme.' },
 ];
 
 const stats = [
@@ -14,43 +14,88 @@ const stats = [
 ];
 
 const testimonials = [
-  { name: 'Sarah M.', role: 'Parent of Grade 8 Student', text: 'Calculus Comprehensive has transformed my child\'s love for learning. The teachers truly care about every student\'s success.' },
-  { name: 'James K.', role: 'Alumni, Class of 2023', text: 'The education and values I gained here prepared me for college and beyond. I\'m grateful for everything.' },
-  { name: 'Dr. Lisa Chen', role: 'Parent of Grade 3 & 5 Students', text: 'As an educator myself, I appreciate the rigorous curriculum and the warm, inclusive community.' },
+  { name: 'Hajia Fatimah Abdul', role: 'Parent', text: 'Calculus School is a great place for my daughter to start her schooling experience. It is welcoming and safe.' },
+  { name: 'Mallam Abd Kabir Uthman', role: 'Parent', text: 'I have two children attending and I cannot say enough about how much I appreciate the wonderful staff.' },
+  { name: 'Labibah Taiwo', role: 'Parent', text: 'This is by far the very best school experience we have had with our children.' },
 ];
 
 export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-hero text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 left-10 w-72 h-72 rounded-full bg-[var(--sky-blue)] blur-3xl" />
-          <div className="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-[var(--sky-blue-light)] blur-3xl" />
-        </div>
-        <div className="container-main py-20 md:py-32 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="badge-sky mb-6 inline-block">Welcome to Calculus Comprehensive</span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Shaping Tomorrow's Leaders Today
+      <section className="home-hero relative overflow-hidden bg-[var(--deep-blue-dark)] text-white">
+        <div className="home-hero-image absolute inset-y-0 right-0 w-full lg:w-[48%]" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[var(--deep-blue-dark)] via-[var(--deep-blue-dark)]/95 to-transparent lg:w-[72%]" />
+        <div className="container-main relative z-10 grid min-h-[640px] items-end py-20 md:py-28 lg:grid-cols-[minmax(0,1fr)_minmax(240px,0.45fr)] lg:items-center lg:gap-16">
+          <div className="max-w-3xl">
+            <p className="eyebrow mb-6 text-[var(--sky-blue-light)]">Daycare · Nursery · Primary · Secondary</p>
+            <h1 className="max-w-2xl text-5xl font-bold leading-[0.98] sm:text-6xl lg:text-7xl">
+              A place to become fully yourself.
             </h1>
-            <p className="text-lg md:text-xl text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed">
-              Empowering young minds through academic excellence, character development, and a nurturing community since 1985.
+            <p className="mt-7 max-w-xl text-lg leading-relaxed text-white/80 md:text-xl">
+              Calculus Schools gives children a stimulating, safe, and child-centred environment to learn, play, grow, and become change agents.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/admissions#enroll" className="btn-accent text-lg px-8 py-4">
-                Start Enrollment
+            <div className="mt-9 flex flex-wrap gap-3">
+              <Link href="/admissions#enroll" className="btn-accent px-7 py-3.5">
+                Begin your application <span aria-hidden="true">↗</span>
               </Link>
-              <Link href="/about" className="btn-outline-light text-lg px-8 py-4">
-                Discover More
+              <Link href="/contact" className="btn-outline-light px-7 py-3.5">
+                Visit campus
               </Link>
             </div>
+          </div>
+          <div className="hidden border-l border-white/25 pl-7 lg:block">
+            <p className="eyebrow text-[var(--sky-blue-light)]">At a glance</p>
+            <div className="mt-6 space-y-5">
+              <div>
+                <p className="font-display text-4xl font-bold">1,200+</p>
+                <p className="mt-1 text-sm text-white/65">students learning across K-12</p>
+              </div>
+              <div>
+                <p className="font-display text-4xl font-bold">18:1</p>
+                <p className="mt-1 text-sm text-white/65">student-to-teacher ratio</p>
+              </div>
+              <div>
+                <p className="font-display text-4xl font-bold">95%</p>
+                <p className="mt-1 text-sm text-white/65">college acceptance rate</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="absolute bottom-0 left-0 right-0 border-t border-white/15 bg-[var(--deep-blue-dark)]/50 backdrop-blur-sm">
+          <div className="container-main flex items-center justify-between py-3 text-xs uppercase tracking-[0.18em] text-white/60">
+            <span>Learning with purpose</span>
+            <span className="hidden sm:inline">Itele Road, Ogun State · 8:00—17:00</span>
+          </div>
+        </div>
+      </section>
+
+      <section className="section bg-white">
+        <div className="container-main">
+          <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+            <div>
+              <p className="eyebrow text-[var(--sky-blue-dark)]">A day at Calculus</p>
+              <h2 className="section-title mb-0 text-left">Learning looks like this.</h2>
+            </div>
+            <Link href="/student-life" className="text-sm font-semibold text-[var(--deep-blue)] underline">See student life ↗</Link>
+          </div>
+          <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
+            {[
+              'https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmODkFP3TgZ6omcSrXaCND1ZADbhdSL8KqBPFTYsgwNCucAxWkJPo5XajR6Vd-4nAWUBjchEU1cY0YvVGNYNZs8rwV8MOa_vqp6WyarfcJCU_viXZhBzUaPbaYdujJFfIm-RIKM=w1400-h920-k-no',
+              'https://web.archive.org/web/20190909041130im_/http://calculusschools.net/wp-content/uploads/2019/07/WhatsApp-Image-2019-07-19-at-3.43.26-AM.jpeg',
+              'https://web.archive.org/web/20190909041130im_/http://calculusschools.net/wp-content/uploads/2019/07/WhatsApp-Image-2019-07-19-at-3.43.28-AM.jpeg',
+              'https://web.archive.org/web/20190909041130im_/http://calculusschools.net/wp-content/uploads/2019/07/WhatsApp-Image-2019-07-19-at-3.43.26-AM-1.jpeg',
+            ].map((image, index) => (
+              <div key={image} className={`overflow-hidden rounded-md bg-[var(--surface)] ${index === 0 ? 'col-span-2 row-span-2' : ''}`}>
+                <img src={image} alt={`Calculus Schools learning moment ${index + 1}`} className="h-full min-h-40 w-full object-cover transition-transform duration-500 hover:scale-105" />
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Stats */}
-      <section className="py-12 bg-white border-b border-[var(--border)]">
+      <section className="py-12 bg-white border-b border-[var(--border)] lg:hidden">
         <div className="container-main">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
             {stats.map(stat => (
@@ -68,7 +113,7 @@ export default function HomePage() {
         <div className="container-main">
           <h2 className="section-title">Our Programs</h2>
           <p className="section-subtitle">
-            Comprehensive education from kindergarten through 12th grade, designed to meet every student where they are.
+            From early childhood through secondary school, every section is designed around the age, curiosity, and potential of each child.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
             {programs.map(prog => (
@@ -91,18 +136,18 @@ export default function HomePage() {
       {/* Why Choose Us */}
       <section className="section bg-white">
         <div className="container-main">
-          <h2 className="section-title">Why Choose Calculus Comprehensive</h2>
+          <h2 className="section-title">Why Choose Calculus Schools</h2>
           <p className="section-subtitle">
             A school where every student is seen, valued, and challenged to reach their full potential.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {[
-              { title: 'Academic Excellence', desc: 'Award-winning curriculum with 15+ AP courses and a 95% college acceptance rate.', icon: '📚' },
-              { title: 'Nurturing Environment', desc: 'Small class sizes ensure personalized attention and strong teacher-student relationships.', icon: '🤝' },
-              { title: 'Modern Facilities', desc: 'State-of-the-art labs, performing arts center, sports complex, and technology hub.', icon: '🏫' },
-              { title: 'Diverse Community', desc: 'Students from 40+ nationalities learning together in an inclusive environment.', icon: '🌍' },
-              { title: 'Character Development', desc: 'Building integrity, leadership, and empathy through service learning and mentorship.', icon: '💡' },
-              { title: 'College Preparation', desc: 'Dedicated counseling, internship programs, and college readiness workshops.', icon: '🎯' },
+              { title: 'Academic Intensive', desc: 'Experienced professionals handle academic activities with each child in mind.', icon: '📚' },
+              { title: 'Child Centred', desc: 'Children are encouraged to think outside the box and actively shape their learning.', icon: '🤝' },
+              { title: 'Learning Through Play', desc: 'A stimulating environment where play is an integral part of meaningful learning.', icon: '🏫' },
+              { title: 'Tahfiz ul Quran', desc: 'Memorisation of the Quran is an integral part of our curriculum and school life.', icon: '✨' },
+              { title: 'Small-Class Attention', desc: 'Individual attention, reporting on achievement, and a positive learning environment.', icon: '💡' },
+              { title: 'Children’s Safety', desc: 'A friendly, homely environment where the safety and wellbeing of every child comes first.', icon: '🛡️' },
             ].map(item => (
               <div key={item.title} className="card border-accent-left">
                 <div className="card-body">
@@ -156,7 +201,7 @@ export default function HomePage() {
         <div className="container-main">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Begin Your Journey With Us</h2>
           <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-            Applications for 2025-2026 are now open. Schedule a campus tour or start your enrollment today.
+            Enrol your child in a school built around curiosity, care, strong foundations, and purposeful growth.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/admissions#enroll" className="btn-accent text-lg px-8 py-4">

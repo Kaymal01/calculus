@@ -34,7 +34,7 @@ export default function StudentLifePage() {
           <span className="badge-sky mb-4 inline-block">Student Life</span>
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">Beyond the Classroom</h1>
           <p className="text-lg text-white/90 max-w-2xl">
-            At Calculus Comprehensive, education extends far beyond textbooks. Discover a vibrant community where students thrive.
+            At Calculus Schools, education extends far beyond textbooks. Discover a vibrant community where children learn, play, and thrive.
           </p>
         </div>
       </section>
@@ -140,7 +140,7 @@ export default function StudentLifePage() {
         <div className="container-main">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Experience Student Life</h2>
           <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-            Visit our campus and see firsthand what makes Calculus Comprehensive a great place to learn and grow.
+            Visit our campus and see firsthand what makes Calculus Schools a welcoming place to learn and grow.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a href="/admissions#enroll" className="btn-accent text-lg px-8 py-4">Apply Now</a>

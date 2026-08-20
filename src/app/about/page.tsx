@@ -26,7 +26,7 @@ export default function AboutPage() {
           <span className="badge-sky mb-4 inline-block">About Us</span>
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">Our Story</h1>
           <p className="text-lg text-white/90 max-w-2xl">
-            For nearly four decades, Calculus Comprehensive has been a beacon of educational excellence.
+            Calculus Schools has spent more than fifteen years creating a stimulating, safe, and child-centred learning environment.
           </p>
         </div>
       </section>
@@ -64,16 +64,16 @@ export default function AboutPage() {
           <h2 className="section-title">Our History</h2>
           <div className="space-y-6 text-[var(--muted)] leading-relaxed">
             <p>
-              Founded in 1985 by a group of visionary educators, Calculus Comprehensive School began with a simple
-              belief: every child deserves access to exceptional education in a supportive environment.
+              Calculus Schools was created with a simple belief: every child deserves an exceptional education in a
+              supportive, stimulating, and safe environment.
             </p>
             <p>
-              What started as a small K-8 school with just 150 students has grown into a thriving K-12 institution
-              serving over 1,200 students. Our expansion has always been guided by our commitment to quality over quantity.
+              Over more than fifteen years, the school has grown around the needs of children from daycare through
+              secondary school, with quality and individual attention guiding every step.
             </p>
             <p>
-              Today, we boast state-of-the-art facilities, an award-winning curriculum, and a diverse community
-              of learners and educators united by a shared passion for excellence.
+              Today, our community is united by child-centred learning, the International Primary Curriculum, and a
+              purposeful Tahfiz programme that develops both knowledge and character.
             </p>
           </div>
         </div>
@@ -82,7 +82,7 @@ export default function AboutPage() {
       <section className="section bg-white">
         <div className="container-main">
           <h2 className="section-title">Our Core Values</h2>
-          <p className="section-subtitle">These principles guide everything we do at Calculus Comprehensive.</p>
+          <p className="section-subtitle">These principles guide everything we do at Calculus Schools.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {values.map(v => (
               <div key={v.title} className="card border-accent-top">
@@ -120,7 +120,7 @@ export default function AboutPage() {
 
       <section className="section bg-gradient-to-r from-[var(--deep-blue)] via-[var(--deep-blue-light)] to-[var(--sky-blue-dark)] text-white text-center">
         <div className="container-main">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Experience Calculus Comprehensive</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Experience Calculus Schools</h2>
           <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
             Schedule a campus tour and see what makes us special firsthand.
           </p>

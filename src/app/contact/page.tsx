@@ -43,10 +43,10 @@ export default function ContactPage() {
   };
 
   const contactInfo = [
-    { icon: '📍', title: 'Address', lines: ['123 Education Drive', 'Academic City, ST 12345'] },
-    { icon: '📞', title: 'Phone', lines: ['Main: (555) 123-4567', 'Admissions: (555) 123-4568'] },
-    { icon: '✉️', title: 'Email', lines: ['General: info@calculuscomprehensive.edu', 'Admissions: admissions@calculuscomprehensive.edu'] },
-    { icon: '🕐', title: 'Office Hours', lines: ['Mon-Fri: 8:00 AM - 4:00 PM', 'School Hours: 7:30 AM - 3:30 PM'] },
+    { icon: '📍', title: 'Address', lines: ['Ijoba Bus Stop, 1-3 Calculus Avenue', 'Tipper Garage Rd, Itele, Ota 102213, Ogun State'] },
+    { icon: '📞', title: 'Phone', lines: ['0810 660 4904'] },
+    { icon: '✉️', title: 'Email', lines: ['admin@calculusschools.net'] },
+    { icon: '🕐', title: 'Hours', lines: ['Open 24 hours'] },
   ];
 
   if (submitted) {
@@ -168,9 +168,9 @@ export default function ContactPage() {
                 <div className="bg-gradient-to-br from-[var(--accent-pale)] to-[var(--sky-blue-light)] h-64 sm:h-80 md:h-full min-h-[300px] flex items-center justify-center">
                   <div className="text-center p-6">
                     <span className="text-4xl block mb-3">📍</span>
-                    <p className="font-bold text-[var(--deep-blue)] mb-1">123 Education Drive</p>
-                    <p className="text-[var(--muted)] text-sm">Academic City, ST 12345</p>
-                    <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="inline-block mt-4 text-sm font-semibold text-[var(--deep-blue)] hover:text-[var(--sky-blue-dark)] underline">
+                    <p className="font-bold text-[var(--deep-blue)] mb-1">Ijoba Bus Stop, 1-3 Calculus Avenue</p>
+                    <p className="text-[var(--muted)] text-sm">Tipper Garage Rd, Itele, Ota 102213, Ogun State</p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Ijoba+Bus+Stop%2C+1-3+Calculus+Avenue%2C+Tipper+Garage+Rd%2C+Itele%2C+Ota+102213%2C+Ogun+State" target="_blank" rel="noopener noreferrer" className="inline-block mt-4 text-sm font-semibold text-[var(--deep-blue)] hover:text-[var(--sky-blue-dark)] underline">
                       Open in Google Maps →
                     </a>
                   </div>
@@ -186,7 +186,7 @@ export default function ContactPage() {
           <h2 className="section-title">Frequently Asked Questions</h2>
           <div className="space-y-4">
             {[
-              { q: 'How do I schedule a campus tour?', a: 'Contact our admissions office at (555) 123-4568 or use the form above to request a tour. Tours are available Monday-Friday, 9 AM - 2 PM.' },
+              { q: 'How do I schedule a campus tour?', a: 'Call 0810 660 4904 or use the form above to request a tour. The Google Maps listing currently shows the school as open 24 hours.' },
               { q: 'What is the application deadline?', a: 'Early application deadline is January 15. Regular deadline is March 1. Rolling admissions available for late applications.' },
               { q: 'Do you offer financial aid?', a: 'Yes, we offer need-based financial aid covering up to 50% of tuition. Applications open in September for the following academic year.' },
               { q: 'What is the student-teacher ratio?', a: 'Our average class size is 18 students, giving us an 18:1 student-teacher ratio across all grade levels.' },

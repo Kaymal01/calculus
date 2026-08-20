@@ -120,7 +120,7 @@ export default function AdmissionsPage() {
           <span className="badge-sky mb-4 inline-block">Admissions</span>
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">Join Our Community</h1>
           <p className="text-lg text-white/90 max-w-2xl">
-            Begin your journey with Calculus Comprehensive. Applications for 2025-2026 are now open.
+            Begin your child’s journey with Calculus Schools. Enrolment enquiries are now welcome.
           </p>
         </div>
       </section>
