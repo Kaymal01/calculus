@@ -11,9 +11,10 @@ const steps = [
 ];
 
 const requirements = [
-  { category: 'Elementary (K-5)', items: ['Completed application form', 'Birth certificate', 'Previous school records', 'Health/immunization records', 'Two recent photographs'] },
-  { category: 'Middle School (6-8)', items: ['Completed application form', 'Birth certificate', 'Previous 2 years of transcripts', 'Standardized test scores', 'Teacher recommendation letter', 'Health/immunization records'] },
-  { category: 'High School (9-12)', items: ['Completed application form', 'Birth certificate', 'Complete high school transcript', 'SAT/ACT scores', 'Two teacher recommendation letters', 'Personal statement/essay', 'Extracurricular activities list'] },
+  { category: 'Nursery & Kindergarten', items: ['Completed application form', 'Birth certificate', 'Immunization record', 'Two recent passport photographs', 'Parent/guardian ID'] },
+  { category: 'Primary (P1–P6)', items: ['Completed application form', 'Birth certificate', 'Previous school report (if applicable)', 'Two passport photographs', 'Immunization record'] },
+  { category: 'Junior Secondary (JSS1–JSS3)', items: ['Completed application form', 'Birth certificate', 'Last 2 years\' school reports', 'Entrance assessment', 'Two passport photographs'] },
+  { category: 'Senior Secondary (SSS1–SSS3)', items: ['Completed application form', 'Birth certificate', 'Complete transcripts', 'WAEC/NECO results (if transferring)', 'Entrance assessment/interview', 'Two passport photographs'] },
 ];
 
 export default function AdmissionsPage() {

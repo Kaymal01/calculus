@@ -1,21 +1,27 @@
 const programs = [
   {
-    title: 'Elementary School (K-5)',
-    grades: 'Kindergarten - Grade 5',
-    desc: 'A nurturing environment where young learners build strong academic foundations through play-based and exploratory learning.',
-    highlights: ['Phonics & Reading Program', 'Hands-on STEM Activities', 'Social-Emotional Learning', 'Arts & Music Integration'],
+    title: 'Nursery & Early Years',
+    grades: 'Nursery - KG',
+    desc: 'Play-based early learning focusing on foundational literacy, numeracy, and social skills.',
+    highlights: ['Early literacy & phonics', 'Numeracy readiness', 'Sensory play & motor development', 'Foundational Tahfiz lessons'],
   },
   {
-    title: 'Middle School (6-8)',
-    grades: 'Grade 6 - Grade 8',
-    desc: 'Developing critical thinking, creativity, and independence as students transition to more rigorous academics.',
-    highlights: ['Advanced Math & Science Tracks', 'Foreign Language (Spanish, French)', 'Digital Literacy & Coding', 'Advisory & Mentorship Program'],
+    title: 'Primary School (P1–P6)',
+    grades: 'Primary 1 - Primary 6',
+    desc: 'A broad primary curriculum preparing pupils for national examinations with a balance of academics and character education.',
+    highlights: ['English Language & Literature', 'Mathematics & Basic Science', 'Social Studies & Civic Education', 'Islamic Religious Studies & Moral Instruction'],
   },
   {
-    title: 'High School (9-12)',
-    grades: 'Grade 9 - Grade 12',
-    desc: 'Building confident learners through advanced studies in English, Mathematics, Sciences, and a purposeful Tahfiz programme.',
-    highlights: ['English & Mathematics', 'Science Foundations', 'Tahfiz Programme', 'Individual Attention'],
+    title: 'Junior Secondary (JSS1–JSS3)',
+    grades: 'JSS1 - JSS3',
+    desc: 'Transition to secondary learning with subject-specialist teachers and preparation for senior secondary pathways.',
+    highlights: ['Core subjects: English, Mathematics, Basic Science', 'Computer Studies & ICT', 'Career guidance & study skills', 'Remedial support and enrichment'],
+  },
+  {
+    title: 'Senior Secondary (SSS1–SSS3)',
+    grades: 'SSS1 - SSS3',
+    desc: 'Focused senior secondary programmes with preparation for WAEC/NECO and university entrance (JAMB) pathways.',
+    highlights: ['WAEC/NECO exam preparation', 'Subject specialisation (Sciences, Arts, Commercial)', 'JAMB guidance & mock exams', 'Life skills and vocational options'],
   },
 ];
 
@@ -87,12 +93,12 @@ export default function AcademicsPage() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { title: 'Mathematics', icon: '📐', desc: 'From foundational numeracy to AP Calculus, building analytical thinking.' },
-              { title: 'Science', icon: '🔬', desc: 'Hands-on labs and inquiry-based learning in biology, chemistry, and physics.' },
-              { title: 'English Language Arts', icon: '📖', desc: 'Reading, writing, and communication skills for lifelong literacy.' },
-              { title: 'Social Studies', icon: '🌍', desc: 'History, geography, and civics to develop informed global citizens.' },
-              { title: 'Foreign Languages', icon: '🗣️', desc: 'Spanish and French programs building cultural awareness and communication.' },
-              { title: 'Arts & Music', icon: '🎨', desc: 'Visual arts, band, choir, and drama for creative expression.' },
+              { title: 'English Language', icon: '📖', desc: 'Language skills, comprehension and composition aligned to the Nigerian syllabus.' },
+              { title: 'Mathematics', icon: '📐', desc: 'Numeracy, problem solving and exam techniques for national examinations.' },
+              { title: 'Basic Science & Technology', icon: '🔬', desc: 'Foundational science, laboratory skills and applied technology.' },
+              { title: 'Social Studies & Civic Education', icon: '🌍', desc: 'History, geography and citizenship education.' },
+              { title: 'Islamic Religious Studies / CRK', icon: '🕌', desc: 'Faith and moral instruction alongside national religious studies.' },
+              { title: 'Computer Studies', icon: '💻', desc: 'Digital literacy, ICT and introductory coding.' },
             ].map(subject => (
               <div key={subject.title} className="card bg-white border-accent-top">
                 <div className="card-body text-center">
@@ -136,8 +142,8 @@ export default function AcademicsPage() {
             {[
               { value: '4', label: 'School Sections' },
               { value: '15+', label: 'Years Educating Children' },
-              { value: 'IPC', label: 'Primary Curriculum' },
-              { value: 'K-12', label: 'Tahfiz Integrated' },
+              { value: 'WAEC/NECO', label: 'Exam Prep' },
+              { value: 'Nursery–SSS', label: 'School Range' },
             ].map(stat => (
               <div key={stat.label}>
                 <p className="text-3xl md:text-4xl font-bold">{stat.value}</p>
