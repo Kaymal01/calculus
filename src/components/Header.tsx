@@ -47,6 +47,12 @@ export default function Header() {
               </Link>
             ))}
             <Link
+              href="/auth/signin"
+              className="px-3 py-2 text-sm font-medium text-[var(--foreground)] hover:text-[var(--deep-blue)] hover:bg-[var(--accent-pale)] transition-colors"
+            >
+              Login
+            </Link>
+            <Link
               href="/admissions#enroll"
               className={buttonVariants({ variant: 'default', size: 'sm', className: 'ml-3 shadow-md hover:shadow-lg' })}
             >
@@ -95,6 +101,13 @@ export default function Header() {
                   {link.label}
                 </Link>
               ))}
+              <Link
+                href="/auth/signin"
+                className="px-4 py-3 text-sm font-medium text-[var(--foreground)] hover:text-[var(--deep-blue)] hover:bg-[var(--accent-pale)] transition-colors w-full"
+                onClick={() => setMobileOpen(false)}
+              >
+                Login
+              </Link>
               <Link
                 href="/admissions#enroll"
                 className={buttonVariants({ variant: 'default', size: 'default', className: 'mt-2 w-full' })}
